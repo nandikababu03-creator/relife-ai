@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ReLife AI | Waste Rescue</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f8f3;
+            color: #203b2b;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 8%;
+            background: white;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #27834b;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #203b2b;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #27834b;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #637568;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #27834b;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            padding: 40px 8%;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #00000008;
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            color: #27834b;
+        }
+
+        .card p {
+            line-height: 1.6;
+            color: #637568;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #637568;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            nav a {
+                margin-left: 10px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">♻️ ReLife AI</div>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="#features">Features</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Give Waste a <span>Second Life.</span></h1>
+
+        <p>
+            Turn discarded items into valuable resources.
+            Discover smarter ways to reuse, repair, donate, and recycle.
+        </p>
+
+        <a href="#features" class="button">Explore ReLife AI</a>
+    </section>
+
+    <section class="features" id="features">
+
+        <div class="card">
+            <h2>📸 Waste Identification</h2>
+            <p>
+                Upload an image of a discarded item
+                and discover its waste category.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>♻️ Smart Recycling</h2>
+            <p>
+                Find practical ways to reuse, repair,
+                donate, or recycle unwanted items.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>🌱 Environmental Impact</h2>
+            <p>
+                Track waste rescued and understand
+                how your actions support sustainability.
+            </p>
+        </div>
+
+    </section>
+    <section id="upload" style="text-align:center; padding:60px 20px;">
+
+    <h1>♻️ Identify Your Waste</h1>
+
+    <p style="margin:20px;">
+        Upload an image to discover how to reuse, repair, donate, or recycle it.
+    </p>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+
+        <input
+    type="file"
+    name="waste_image"
+    accept="image/*"
+    required
+>
+
+<br><br>
+
+<label for="category">Select Waste Category:</label>
+
+<br><br>
+
+<select name="category" id="category" required>
+    <option value="">Choose a category</option>
+    <option value="Plastic">Plastic</option>
+    <option value="Paper">Paper</option>
+    <option value="Metal">Metal</option>
+    <option value="Glass">Glass</option>
+    <option value="Organic">Organic Waste</option>
+    <option value="Electronic">Electronic Waste</option>
+    <option value="Textile">Textile</option>
+</select>
+
+        <br><br>
+
+        <button
+            type="submit"
+            style="background:#27834b; color:white; padding:15px 30px;
+            border:none; border-radius:8px; cursor:pointer;"
+        >
+            Identify Waste
+        </button>
+
+    </form>
+
+    </section>
+
+    <footer>
+        ReLife AI © 2026 | Give Waste a Second Life 🌍
+    </footer>
+
+</body>
+</html>
